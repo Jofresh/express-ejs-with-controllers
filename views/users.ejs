@@ -1,18 +1,20 @@
 <!-- <html> -->
 <%- include('./partials/head'); %>
 <body class="d-flex flex-column h-100">
-    <%- include('./partials/nav'); %>
-    
+    <%- include('./partials/nav', { users: true }); %>
     <main class="flex-shrink-0">
         <div class="container">
-            <h1>Users page 1</h1>
-            <ul> <% locals.users && locals.users.forEach(user => { %>
-                <li><%= user.firstname + ' ' + user.lastname %></li>
-            <% }) %></ul>
+            <h1>Users</h1>
+
+            <div class="container">
+                <div class="row row-cols-3">
+                    <% locals.users && locals.users.forEach(user => { %><div class="col">
+                        <%= `${user.name}` %>
+                    </div><% }) %>
+                </div>
+            </div>
         </div>
     </main>
-    
     <%- include('./partials/footer'); %>
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

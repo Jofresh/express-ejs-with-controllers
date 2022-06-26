@@ -1,6 +1,7 @@
-const { users } = require('./../../models')
+const { fetchUsers } = require('./../../models')
 
-const findAll = (req, res) => {
+const findAll = async (req, res) => {
+    const users = await fetchUsers()
     res.render('users', { users })
 }
 

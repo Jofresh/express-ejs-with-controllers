@@ -1,0 +1,19 @@
+<!-- <html> -->
+<%- include('./partials/head'); %>
+<body class="d-flex flex-column h-100">
+    <%- include('./partials/nav', { posts: true }); %>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="card">
+                <h5 class="card-header">Post</h5>
+                <div class="card-body">
+                    <h5 class="card-title"><%= locals.post && locals.post.title %></h5>
+                    <p class="card-text"><%= locals.post && locals.post.body %></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer'); %>
+</body>
+</html>
+    
