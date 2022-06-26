@@ -18,8 +18,6 @@ const find = async (req, res) => {
             const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
             const comments = await response.json()
 
-            console.log(comments)
-            
             res.render('post', { post, comments })
         } else {
             res.render('404', { url: req.url })
