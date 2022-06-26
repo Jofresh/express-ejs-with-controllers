@@ -9,4 +9,8 @@ router.get('/', (req, res) => {
     res.render('index', { title: "My page" })
 })
 
+router.get('*', (req, res) => {
+    res.render('404', { url: req.url })
+})
+
 module.exports = router

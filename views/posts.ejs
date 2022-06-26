@@ -1,15 +1,15 @@
 <!-- <html> -->
 <%- include('./partials/head'); %>
 <body class="d-flex flex-column h-100">
-    <%- include('./partials/nav', { home: true }); %>
+    <%- include('./partials/nav', { posts: true }); %>
     <main class="flex-shrink-0">
         <div class="container">
             <h1>Posts</h1>
     
-            <div class="row row-cols-3">
+            <div class="row row-cols-3 row-cols-md-3 g-4">
                 <% locals.posts && locals.posts.forEach(post => { %>
                 <div class="col">
-                    <div class="card">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title"><%= post.title %></h5>
                             <!--<p class="card-text"><%# post.body %>-->

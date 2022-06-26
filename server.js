@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const routes = require('./routes')
 
+// https://stackoverflow.com/questions/40036964/req-params-id-returning-multiple-values
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
