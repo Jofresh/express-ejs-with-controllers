@@ -1,4 +1,5 @@
 const { fetchPosts } = require('./../../models')
+const fetch = require('node-fetch')
 
 const findAll = async (req, res) => {
     const posts = await fetchPosts()
