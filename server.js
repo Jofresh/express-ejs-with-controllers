@@ -15,5 +15,5 @@ app.listen(port, (err) => {
         console.log('Error in server setup')
         return
     }
-    console.log(`App listening on ${port}`)
+    console.log(`App listening on http://localhost:${port}/`)
 })
