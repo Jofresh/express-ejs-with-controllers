@@ -1,26 +1,19 @@
 <!-- <html> -->
 <%- include('./partials/head'); %>
-<body class="d-flex flex-column h-100">
+<body>
     <%- include('./partials/nav', { posts: true }); %>
-    <main class="flex-shrink-0">
-        <div class="container">
-            <h1>Posts</h1>
+    <div class="main">
+        <h1>Posts</h1>
     
-            <div class="row row-cols-3 row-cols-md-3 g-4">
-                <% locals.posts && locals.posts.forEach(post => { %>
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title"><%= post.title %></h5>
-                            <!--<p class="card-text"><%# post.body %>-->
-                            <a href="/posts/<%= post.id %> " class="btn btn-primary">See more</a>
-                        </div>
-                    </div>
-                </div>
-                <% }) %>
+        <div class="posts__list">
+            <% locals.posts && locals.posts.forEach(post => { %>
+            <div class="posts__list-item">
+                <h5 class="posts__list-item--title"><%= post.title %></h5>
+                <a class="posts__list-item--link" href="/posts/<%= post.id %>">See more</a>
             </div>
+            <% }) %>
         </div>
-    </main>    
+    </div>
     <%- include('./partials/footer'); %>
 </body>
 </html>

@@ -1,14 +1,12 @@
 <!-- <html> -->
 <%- include('./partials/head'); %>
-<body class="d-flex flex-column h-100">
+<body>
     <%- include('./partials/nav', { home: true }); %>
     
-    <main class="flex-shrink-0">
-        <div class="container">
-            <h1>Home</h1>
-            <p><%= locals.title %> </p>
-        </div>
-    </main>
+    <div class="main">
+        <h1>Home</h1>
+        <p><%= locals.title %> </p>
+    </div>
 
     <%- include('./partials/footer'); %>
 </body>

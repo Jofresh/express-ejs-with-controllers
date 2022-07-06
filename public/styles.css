@@ -1,8 +1,53 @@
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-main > .container {
-    padding: 60px 15px 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
 }
-  
+
+/* Nav */
+.nav {
+  display: flex;
+  height: 50px;
+  background-color: red;
+  align-items: center;
+}
+
+.nav__brand {
+  flex: 1;
+}
+
+.nav::after {
+  content: "";
+  flex: 1;
+}
+
+.nav__list {
+  width: 50vh;
+  display: flex;
+  gap: 50px;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Main (Users, Posts) */
+.main {
+  padding: 2.5rem;
+  padding-bottom: calc(2.5rem + 2.5rem);
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 2.5rem;
+  width: 100%;
+  background-color: blue;
+
+  display: flex;
+  align-items: center;
+}

@@ -1,17 +1,16 @@
 <!-- <html> -->
 <%- include('./partials/head'); %>
-<body class="d-flex flex-column h-100">
+<body>
     <%- include('./partials/nav', { users: true }); %>
-    <main class="flex-shrink-0">
-        <div class="container">
-            <h1>Users</h1>
-            <div class="row row-cols-3">
-                <% locals.users && locals.users.forEach(user => { %><div class="col">
-                    <%= `${user.name}` %>
-                </div><% }) %>
+    <div class="main">
+        <h1>Users</h1>
+        <div class="users__list">
+            <% locals.users && locals.users.forEach(user => { %>
+                <div class="users__list-item"><%= user.name %></div><% 
+            }) %>
             </div>
         </div>
-    </main>
+    </div>
     <%- include('./partials/footer'); %>
 </body>
 </html>
